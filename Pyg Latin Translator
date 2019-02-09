@@ -1,0 +1,13 @@
+print "This is a Pyg Latin Translator!"
+
+
+pyg = 'ay' # we add this to the end of the word
+original = raw_input('Enter a word:') # prompts user to type something
+word = original.lower() #makes the user's input all lowercase
+first = word[0] # retrieves the first character of the user's input
+new_word = word + first + pyg # combines the word with the first letter of the word followed by 'ay'
+new_word = new_word[1:len(new_word)] # slices the new_word after the first letter
+
+if len(original) > 0 and original.isalpha(): # checks that the length of the input is greater than 0 and all characters are letter, not numbers etc.
+  print "Your word was " + original + " The Pyg Latin Translation is: " + new_word
+else: # ensures that if the string is empty, 'empty' is printed out
